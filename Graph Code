@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import numpy as np
+N = 5
+ind = np.arange(N)
+width = 0.25
+  
+xvals = [15, 5,9,30,6]
+bar1 = plt.bar(ind, xvals, width, color = '#F9B269')
+  
+yvals = [20,6,15,15,36]
+bar2 = plt.bar(ind+width, yvals, width, color='#FB7F17')
+  
+zvals = [10,2,30,40,15]
+bar3 = plt.bar(ind+width*2, zvals, width, color = '#56351A')
+  
+plt.xlabel("Hospital Information")
+plt.ylabel('Count')
+plt.title("Hospital Data")
+
+  
+plt.xticks(ind+width,['Bed Count', 'Doctors Available', 'Patient Deaths', 'Patients Admitted','Miles Away'])
+plt.tick_params(axis='x', which='major', labelsize=7)
+plt.legend( (bar1, bar2, bar3), ('Memorial Hospital', 'First Choice Health', 'Grace Medical') )
+
+import numpy as np
+N = 7
+ind = np.arange(N)
+width = 0.25
+  
+xvals = [42, 29, 15, 20, 30, 12, 25]
+bar1 = plt.bar(ind, xvals, width, color = '#F9B269')
+  
+yvals = [64, 50, 29, 30, 40, 30, 43]
+bar2 = plt.bar(ind+width, yvals, width, color='#FB7F17')
+  
+zvals = [20, 25, 5, 15, 12, 15, 12]
+bar3 = plt.bar(ind+width*2, zvals, width, color = '#56351A')
+  
+plt.xlabel("Supplies")
+plt.ylabel('Count')
+plt.title("Supplies Data")
+
+  
+plt.xticks(ind+width,['Water', 'Food', 'Medications','Tools', 'Sanitation','Clothing','First Aid Kits'])
+plt.tick_params(axis='x', which='major', labelsize=8)
+plt.legend( (bar1, bar2, bar3), ('Walmart', 'Target', 'Walgreens') )
